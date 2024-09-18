@@ -1,12 +1,9 @@
-import { defineConfig } from 'drizzle-kit'
-export default defineConfig({
-  schema: "./db/schema.ts",
-  dialect: 'postgresql',
-  migrations: {
-    prefix: 'supabase',
-  },
-  dbCredentials: {
-    url: process.env.DATABASE_URL || 
-    "postgres://localhost:5432/drizzle",
-  },
+import { pgTable, serial, text, varchar } from "drizzle-orm/pg-core";
+
+export const projects = pgTable('projects', {
+  id: serial("id").primaryKey(),
+  name: text("name"),
+  description: text("description"),
+  url: text("url"),
+  userId: varchar("user_id"),
 });

@@ -12,6 +12,8 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
 import { Plus } from "lucide-react"
+import { createProject } from "@/actions/createProject";
+import SubmitButton from "@/components/submit-proj-btn";
 
 
 const NewProjBtn = () => {
@@ -29,26 +31,24 @@ const NewProjBtn = () => {
             Create a new project to get started
           </DialogDescription>
         </DialogHeader>
-        <form className="flex gap-4 flex-col">
+        <form className="flex gap-4 flex-col" action={createProject}>
           <div className="grid sm:grid-cols-2 gap-4">
             <div className="flex flex-col gap-2">
               <Label htmlFor="name">Name</Label>
-              <Input id="name" placeholder="Project Name" />
+              <Input id="name" name="name" placeholder="Project Name" />
             </div>
             <div className="flex flex-col gap-2">
               <Label htmlFor="url">URL</Label>
-              <Input id="url" placeholder="https://example.com"/>
+              <Input id="url" name="url" placeholder="https://example.com"/>
             </div>
           </div>
           <div className="flex flex-col gap-2">
             <Label htmlFor="description">Description</Label>
-            <Textarea id="description" placeholder="Description (optional)
+            <Textarea name="description" id="description" placeholder="Description (optional)
             "/>
           </div>
+          <SubmitButton/>
         </form>
-        <DialogFooter>
-          <Button>Create Project</Button>
-        </DialogFooter>
       </DialogContent>
     </Dialog>
   )
