@@ -22,7 +22,7 @@ const NewProjBtn = () => {
           <Plus className="w-4 h-4 mr-2"/>Create Project
         </Button>
       </DialogTrigger>
-      <DialogContent className="sm:mac-w-[425px] rounded-md">
+      <DialogContent className="sm:mac-w-[425px] rounded-md z-50 bg-white">
         <DialogHeader>
           <DialogTitle>New Project</DialogTitle>
           <DialogDescription>
