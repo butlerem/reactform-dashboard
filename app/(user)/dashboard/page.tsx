@@ -1,5 +1,7 @@
+import NewProjBtn from "@/components/new-proj"
+
 export default function Page() {
   return (
-    <div>dashboard page</div>
+    <div><NewProjBtn /></div>
   )
 }
