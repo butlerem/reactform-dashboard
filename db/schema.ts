@@ -1,7 +1,7 @@
-import { pgTable, serial, text, varchar, integer } from "drizzle-orm/pg-core";
+import { pgTable, serial, text, varchar, integer, boolean } from "drizzle-orm/pg-core";
 import { relations } from "drizzle-orm";
 
-export const projects = pgTable('projects', {
+export const projects = pgTable("projects", {
   id: serial("id").primaryKey(),
   name: text("name"),
   description: text("description"),
@@ -9,8 +9,7 @@ export const projects = pgTable('projects', {
   userId: varchar("user_id"),
 });
 
-export const projectsRelations = relations
-(projects, ({ many }) => ({
+export const projectsRelations = relations(projects, ({ many }) => ({
   feedbacks: many(feedbacks),
 }));
 
@@ -20,11 +19,12 @@ export const feedbacks = pgTable("feedbacks", {
   userName: text("user_name"),
   userEmail: text("user_email"),
   message: text("message"),
+  rating: integer("rating"),
 });
 
-export const feedbacksRelations = relations(feedbacks, ({ one}) => ({
+export const feedbacksRelations = relations(feedbacks, ({ one }) => ({
   project: one(projects, {
     fields: [feedbacks.projectId],
     references: [projects.id],
-  })
+  }),
 }));

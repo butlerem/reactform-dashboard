@@ -40,12 +40,19 @@ function Table(props: { data: Feedback[] }) {
         footer: props => props.column.id,
       },
       {
+        accessorFn: row => row.rating,
+        id: 'rating',
+        cell: info => info.getValue() === null ? <span>N/A</span> : <Ratings rating={info.getValue() as number} count={5} />,
+        header: () => <span>Rating</span>,
+        footer: props => props.column.id,
+      },
+      {
         accessorKey: 'message',
         header: () => 'Message',
         footer: props => props.column.id,
         size: 400,
         minSize: 200,
-        mazSize: 600,
+        maxSize: 600,
       },
     ],
     []
