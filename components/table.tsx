@@ -1,7 +1,9 @@
-"use client"
+"use client";
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import { ChevronRight, ChevronLeft, ChevronsLeft, ChevronsRight } from 'lucide-react';
+import { ChevronRight, ChevronLeft, ChevronsRight, ChevronsLeft } from 'lucide-react'
+import Ratings from './ratings';
+
 
 import {
   Column,
