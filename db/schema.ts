@@ -1,4 +1,4 @@
-import { pgTable, serial, text, varchar } from "drizzle-orm/pg-core";
+import { pgTable, serial, text, varchar, integer } from "drizzle-orm/pg-core";
 import { relations } from "drizzle-orm";
 
 export const projects = pgTable('projects', {
@@ -16,8 +16,7 @@ export const projectsRelations = relations
 
 export const feedbacks = pgTable("feedbacks", {
   id: serial("id").primaryKey(),
-  projectId: varchar("project_id"),
-  feedback: text("feedback"),
+  projectId: integer("project_id"),
   userName: text("user_name"),
   userEmail: text("user_email"),
   message: text("message"),
