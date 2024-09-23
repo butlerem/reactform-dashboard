@@ -18,10 +18,10 @@ const PageHeader = () => {
           <div>
             <SignedOut>
               <SignInButton>
-                <Button className="bg-black">Sign In</Button>
+                <Button className="bg-[var(--primary)] hover:bg-[var(--primary-hover)] text-[var(--primary-foreground)]">Sign In</Button>
               </SignInButton>
               <SignUpButton>
-                <Button className="bg-black ml-2">Sign Up</Button>
+                <Button className="bg-[var(--primary)] hover:bg-[var(--primary-hover)] text-[var(--primary-foreground)] ml-2">Sign Up</Button>
               </SignUpButton>
             </SignedOut>
             <SignedIn>
