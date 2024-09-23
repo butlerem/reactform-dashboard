@@ -39,7 +39,8 @@ https://reactform-dashboard.vercel.app/
 ## Database
 
 The database is hosted on Supabase and managed using Drizzle ORM.
-To push new schema changes: npm run db
+To push new schema changes: 
+```npm run db```
 
 ## Deployment 
 
