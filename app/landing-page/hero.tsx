@@ -3,7 +3,7 @@ import {
   SignUpButton,
   SignedIn,
   SignedOut,
-} from '@clerk/nextjs'
+} from '@clerk/nextjs';
 import Link from "next/link";
 import { LogIn, Github } from "lucide-react";
 import Image from "next/image";
@@ -50,7 +50,7 @@ const Hero = () => {
         </div>
       </div>
     </section>
-  )
+  );
 }
 
 export default Hero;
