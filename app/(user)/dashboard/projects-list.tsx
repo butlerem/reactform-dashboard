@@ -16,6 +16,7 @@ type Props = {
 };
 
 const ProjectsList = (props: Props) => {
+
   return (
     <div>
       <ul className="grid grid-cols-1 md:grid-cols-3 m-5 p-4 gap-4">

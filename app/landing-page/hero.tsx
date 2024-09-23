@@ -15,7 +15,7 @@ const Hero = () => {
         <div className="flex flex-col max-w-sm justify-center">
           <div className="mb-8">
             <h1 className="mb-5 text-5xl font-extrabold leading-tight">Collect your feedback seamlessly</h1>
-            <p className="text-gray-500 texl-lg">Easily integrate Reactform and start collecting feedback today.</p>
+            <p className="text-gray-500 texl-lg">Easily integrate Nexx and start collecting feedback today.</p>
           </div>
           <div>
             <SignedOut>
@@ -25,7 +25,7 @@ const Hero = () => {
                     <LogIn className="w-4 h-4 mr-2" />
                     Get Started</Button>
                   <Button variant="secondary" asChild>
-                    <Link href="https://github.com/butlerem">
+                    <Link href="https://github.com">
                       <Github className="w-4 h-4 mr-2" />
                       GitHub
                     </Link>
