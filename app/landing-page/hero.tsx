@@ -14,17 +14,22 @@ const Hero = () => {
       <div className="container mx-auto px-4 mb-24 mt-4 flex flex-col md:flex-row justify-center">
         <div className="flex flex-col max-w-sm justify-center">
           <div className="mb-8">
-            <h1 className="mb-5 text-5xl font-extrabold leading-tight">Collect your feedback seamlessly</h1>
-            <p className="text-gray-500 texl-lg">Easily integrate Nexx and start collecting feedback today.</p>
+            <h1 className="mb-5 text-5xl font-extrabold leading-tight text-[var(--foreground)]">
+              Collect feedback seamlessly
+            </h1>
+            <p className="text-[var(--muted-foreground)] text-lg">
+              Easily integrate Reactform and start collecting feedback today.
+            </p>
           </div>
           <div>
             <SignedOut>
               <SignUpButton>
                 <div className="flex gap-3">
-                  <Button>
+                  <Button className="bg-[var(--primary)] hover:bg-[var(--primary-hover)] text-[var(--primary-foreground)]">
                     <LogIn className="w-4 h-4 mr-2" />
-                    Get Started</Button>
-                  <Button variant="secondary" asChild>
+                    Get Started
+                  </Button>
+                  <Button variant="secondary" asChild className="bg-[var(--accent)] hover:bg-[var(--accent)] text-[var(--accent-foreground)]">
                     <Link href="https://github.com">
                       <Github className="w-4 h-4 mr-2" />
                       GitHub
@@ -34,8 +39,9 @@ const Hero = () => {
               </SignUpButton>
             </SignedOut>
             <SignedIn>
-              <Button asChild>
-                <Link href="/dashboard">Dashboard</Link></Button>
+              <Button asChild className="bg-[var(--primary)] hover:bg-[var(--primary-hover)] text-[var(--primary-foreground)]">
+                <Link href="/dashboard">Dashboard</Link>
+              </Button>
             </SignedIn>
           </div>
         </div>

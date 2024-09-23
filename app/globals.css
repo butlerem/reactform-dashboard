@@ -29,15 +29,17 @@ body {
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --foreground: #2e3a47;
+    --card: #ebf2f0;
+    --card-alt: #fff4e8;
+    --card-foreground: #2e3a47;
+    --popover: #ebf2f0;
+    --popover-foreground: #2e3a47;
+    --primary: #36485c;
+    --primary-foreground: #ffffff;
+    --primary-hover: #2e3a47;
+    --secondary: #fff4e8; 
+    --secondary-foreground: #2e3a47;
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
     --accent: 210 40% 96.1%;
