@@ -8,7 +8,6 @@ const features = [
   {
     title: 'Fully Customizable',
     description: 'Tailor Reactform to meet your specific requirements.',
-    icon: 'icon-2',
   },
   {
     title: 'Advanced Analytics',
@@ -35,7 +34,9 @@ const FeaturesSection = () => {
       <div className="container mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {features.map((feature, index) => (
-            <Feature key={index} {...feature} className="bg-[var(--card-alt)] text-[var(--foreground)]" />
+            <div key={index} className="bg-[var(--card-alt)] text-[var(--foreground)] p-5 border rounded-lg shadow-md">
+              <Feature title={feature.title} description={feature.description} />
+            </div>
           ))}
         </div>
       </div>
